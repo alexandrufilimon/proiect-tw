@@ -1,7 +1,6 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";
 import Menu from "@material-ui/core/Menu";
@@ -20,13 +19,14 @@ const styles = theme => ({
     backgroundColor: "#0088cc",
     padding: "10px",
     borderRadius: 35,
+    marginLeft: "5%",
     "&:hover": {
       backgroundColor: " #80d4ff"
     }
   },
 
   theMenubar: {
-    backgroundColor: "#0088cc",
+    backgroundColor: 'rgba(0,0,0,0.2)',
     padding: "12px"
   },
 
