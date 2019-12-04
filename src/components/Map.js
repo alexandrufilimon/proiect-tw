@@ -5,6 +5,7 @@ import Autocomplete from 'react-google-autocomplete';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import Button from '@material-ui/core/Button';
+import { FaLocationArrow } from 'react-icons/fa';
 Geocode.setApiKey( "AIzaSyBDZxFEDcqP-idz3NhTnou7A0psGxMsnnA" );
 Geocode.enableDebug();
 
@@ -39,7 +40,6 @@ class Map extends Component{
 			},
 			selectedOption: null
 		}
-		
 	}
 
 
@@ -178,12 +178,6 @@ class Map extends Component{
 	};
 
 	/**
-	 * This Event triggers when the marker window is closed
-	 *
-	 * @param event
-	 */
-
-	/**
 	 * When the marker is dragged you get the lat and long using the functions available from event object.
 	 * Use geocode to get the address, city, area and state from the lat and lng positions.
 	 * And then set those values in the state.
@@ -267,7 +261,6 @@ class Map extends Component{
 							   defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
 				
 					>
-						
 												<Marker google={this.props.google}
 												icon="https://www.robotwoods.com/dev/misc/bluecircle.png"
 						        				draggable={true}
@@ -277,6 +270,7 @@ class Map extends Component{
 						<Select onChange={this.handleChange} isMulti components={animatedComponents} options = {options} />
 						<Button variant="contained" onClick={this.findCoordinates}>
 							Show my location
+							<FaLocationArrow/>
       					</Button>
 						<Autocomplete
 							style={{
