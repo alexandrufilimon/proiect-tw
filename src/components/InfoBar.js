@@ -12,6 +12,7 @@ import { IoLogoFacebook} from 'react-icons/io';
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
+    marginTop: '250px'
   },
   media: {
     height: 140,

@@ -1,20 +1,20 @@
-import React from "react";
-import Box from "@material-ui/core/Box";
-import "./App.css";
-import Menubar from "./components/Menubar";
-import InfoBar from "./components/InfoBar";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Home from "./components/Home";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Menubar></Menubar>
-        <InfoBar></InfoBar>
-        
-        
-      </div>
-    );
-  }
+
+class App extends Component {
+	render() {
+		return (
+			<div className="App">
+				<Router>
+					<div>
+						<Route exact path="/" component={Home} />
+					</div>
+				</Router>
+			</div>
+		);
+	}
 }
 
 export default App;

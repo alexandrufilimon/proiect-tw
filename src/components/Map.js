@@ -26,7 +26,10 @@ class Map extends Component{
 			city: '',
 			area: '',
 			state: '',
-			location: null,
+			locations: {
+				lat: '',
+				lng: ''
+			},
 			mapPosition: {
 				lat: this.props.center.lat,
 				lng: this.props.center.lng
@@ -266,6 +269,7 @@ class Map extends Component{
 						/>
 						<Select onChange={this.handleChange} isMulti components={animatedComponents} options = {options} />
 						<Button variant="contained" onClick={this.findCoordinates}>
+							Show my location
 							<FaLocationArrow/>
       					</Button>
 						<Autocomplete
